@@ -3,6 +3,7 @@ import json
 import re
 import subprocess
 from pathlib import Path
+import tempfile
 
 import torch
 import whisper
@@ -12,7 +13,7 @@ import whisper
 # DIRECTORIES
 # ============================================================
 
-PROJECT = Path("/content/ai-shorts-studio")
+PROJECT = Path(tempfile.gettempdir()) / "ai-shorts-studio"
 
 UPLOAD_DIR = PROJECT / "uploads"
 OUTPUT_DIR = PROJECT / "outputs"
